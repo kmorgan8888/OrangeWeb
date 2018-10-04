@@ -22,7 +22,10 @@
 
     <!-- Custom styles for this template -->
     <link href="css/agency.css" rel="stylesheet">
-
+    <!-- Start CSS Slideshow HEAD section -->
+    <link rel="stylesheet" type="text/css" href="engine1/style.css" />
+    <script type="text/javascript" src="engine1/jquery.js"></script>
+    <!-- End CSS Slider HEAD section -->
   </head>
 
   <body id="page-top">
@@ -30,7 +33,8 @@
     <!-- Navigation -->
     <nav class="navbar navbar-expand-lg navbar-dark fixed-top" id="mainNav">
       <div class="container">
-        <a class="navbar-brand js-scroll-trigger" href="#page-top">Orange Construction</a>
+        <a class="navbar-brand js-scroll-trigger" href="#page-top"><img style="max-width:200px; margin-top: -8px; margin-left: -80px;"
+             src="../img/navbarLogo.jpg"></a>
         <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
           Menu
           <i class="fas fa-bars"></i>
@@ -62,10 +66,170 @@
       <div class="container">
         <div class="intro-text">
           <div class="intro-lead-in">Welcome To Our Portfolio!</div>
-          <div class="intro-heading text-uppercase">It's Nice To Meet You</div>
-          <a class="btn btn-primary btn-xl text-uppercase js-scroll-trigger" href="#services">Tell Me More</a>
+          <!-- <div class="intro-heading text-uppercase">It's Nice To Meet You</div>
+          <a class="btn btn-primary btn-xl text-uppercase js-scroll-trigger" href="#services">Tell Me More</a> -->
+          <!-- Slideshow container -->
+          <!-- <div class="slideshow-container"> -->
+            <!-- Full-width images with number and caption text -->
+            <!-- <div class="mySlides">
+              <img src="../img/1.jpg" style="width:60%">
+              <div class="text">Caption Text</div>
+            </div>
+
+            <div class="mySlides">
+              <img src="../img/2.jpg" style="width:60%">
+              <div class="text">Caption Two</div>
+            </div>
+
+            <div class="mySlides">
+              <img src="../img/3.jpg" style="width:60%">
+              <div class="text">Caption Three</div>
+            </div>
+
+          </div> -->
+
+          <!-- The dots/circles -->
+          <!-- <div style="text-align:center">
+            <span class="dot" onclick="currentSlide(1)"></span>
+            <span class="dot" onclick="currentSlide(2)"></span>
+            <span class="dot" onclick="currentSlide(3)"></span>
+          </div> -->
+          <div  class="slideshow-container" id="carousel" >
+
+             <div class="hideLeft">
+              <img src="https://i1.sndcdn.com/artworks-000165384395-rhrjdn-t500x500.jpg">
+            </div>
+
+            <div class="prevLeftSecond">
+              <img src="https://i1.sndcdn.com/artworks-000185743981-tuesoj-t500x500.jpg">
+            </div>
+
+            <div class="prev">
+              <img src="https://i1.sndcdn.com/artworks-000158708482-k160g1-t500x500.jpg">
+            </div>
+
+            <div class="selected">
+              <img src="https://i1.sndcdn.com/artworks-000062423439-lf7ll2-t500x500.jpg">
+            </div>
+
+            <div class="next">
+              <img src="https://i1.sndcdn.com/artworks-000028787381-1vad7y-t500x500.jpg">
+            </div>
+
+            <div class="nextRightSecond">
+              <img src="https://i1.sndcdn.com/artworks-000108468163-dp0b6y-t500x500.jpg">
+            </div>
+
+            <div class="hideRight">
+              <img src="https://i1.sndcdn.com/artworks-000064920701-xrez5z-t500x500.jpg">
+            </div>
+          </div>
+          <div class="buttons">
+            <button id="prev">Prev</button>
+            <button id="next">Next</button>
+          </div>
         </div>
       </div>
+      <script>
+      function moveToSelected(element) {
+        if (element == "next") {
+          var selected = $(".selected").next();
+        } else if (element == "prev") {
+          var selected = $(".selected").prev();
+        } else {
+          var selected = element;
+        }
+
+        var next = $(selected).next();
+        var prev = $(selected).prev();
+        var prevSecond = $(prev).prev();
+        var nextSecond = $(next).next();
+
+        $(selected)
+          .removeClass()
+          .addClass("selected");
+
+        $(prev)
+          .removeClass()
+          .addClass("prev");
+        $(next)
+          .removeClass()
+          .addClass("next");
+
+        $(nextSecond)
+          .removeClass()
+          .addClass("nextRightSecond");
+        $(prevSecond)
+          .removeClass()
+          .addClass("prevLeftSecond");
+
+        $(nextSecond)
+          .nextAll()
+          .removeClass()
+          .addClass("hideRight");
+        $(prevSecond)
+          .prevAll()
+          .removeClass()
+          .addClass("hideLeft");
+      }
+
+      // Eventos teclado
+      $(document).keydown(function(e) {
+        switch (e.which) {
+          case 37: // left
+            moveToSelected("prev");
+            break;
+
+          case 39: // right
+            moveToSelected("next");
+            break;
+
+          default:
+            return;
+        }
+        e.preventDefault();
+      });
+
+      $("#carousel div").click(function() {
+        moveToSelected($(this));
+      });
+
+      $("#prev").click(function() {
+        moveToSelected("prev");
+      });
+
+      $("#next").click(function() {
+        moveToSelected("next");
+      });
+      // var slideIndex = 1;
+      // showSlides(slideIndex);
+      //
+      // // Next/previous controls
+      // function plusSlides(n) {
+      //   showSlides(slideIndex += n);
+      // }
+      //
+      // // Thumbnail image controls
+      // function currentSlide(n) {
+      //   showSlides(slideIndex = n);
+      // }
+      //
+      // function showSlides(n) {
+      //   var i;
+      //   var slides = document.getElementsByClassName("mySlides");
+      //   var dots = document.getElementsByClassName("dot");
+      //   if (n > slides.length) {slideIndex = 1}
+      //   if (n < 1) {slideIndex = slides.length}
+      //   for (i = 0; i < slides.length; i++) {
+      //       slides[i].style.display = "none";
+      //   }
+      //   for (i = 0; i < dots.length; i++) {
+      //       dots[i].className = dots[i].className.replace(" active", "");
+      //   }
+      //   slides[slideIndex-1].style.display = "block";
+      //   dots[slideIndex-1].className += " active";
+      // }
+      </script>
     </header>
 
     <!-- Services -->
@@ -684,6 +848,8 @@
         </div>
       </div>
     </div>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
 
     <!-- Bootstrap core JavaScript -->
     <script src="vendor/jquery/jquery.min.js"></script>
