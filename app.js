@@ -13,7 +13,6 @@ var expressValidator = require('express-validator');
 var path = require('path');
 var flash = require('connect-flash');
 var port = process.env.PORT || 3000;
-var $ = require('jquery');
 
 var app = express();
 

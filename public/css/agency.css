@@ -175,6 +175,8 @@ header.masthead {
   background-attachment: scroll;
   background-position: center center;
   background-size: cover;
+  background-color: black;
+  height: 700px;
 }
 
 header.masthead .intro-text {
@@ -201,11 +203,11 @@ header.masthead .intro-text .intro-lead-in {
 
 @media (min-width: 768px) {
   header.masthead .intro-text {
-    padding-top: 150px;
-    padding-bottom: 0px;
+    padding-top: 130px;
+    padding-bottom: 50px;
   }
   header.masthead .intro-text .intro-lead-in {
-    color: black;
+    color: white;
     font-size: 40px;
     font-style: italic;
     line-height: 40px;
@@ -226,7 +228,7 @@ header.masthead .intro-text .intro-lead-in {
   /* Slideshow container */
   header.masthead .intro-text .slideshow-container {
     max-width: 1000px;
-    padding-top: 30px;
+    padding-top: 10px;
     bottom: -200px;
     position: relative;
     margin: auto;
@@ -348,15 +350,18 @@ header.masthead .intro-text .intro-lead-in {
 }
 
 .buttons {
-  top: -10px;
+  top: 30px;
   position: relative;
   left: 50%;
   transform: translateX(-50%);
-  bottom: 10px;
+  bottom: 0px;
 }
-
+/* #services {
+  top: -50px;
+} */
 
 .service-heading {
+
   margin: 15px 0;
   text-transform: none;
 }
