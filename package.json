@@ -1,7 +1,7 @@
 {
   "name": "orangeconstruction",
   "version": "8.9.4",
-  "description": "Orange Construction Website ",
+  "description": "Orange Construction Website",
   "main": "app.js",
   "dependencies": {
     "body-parser": "^1.18.3",
@@ -17,7 +17,7 @@
     "logger": "^0.0.1",
     "nodemon": "^1.18.4",
     "npm": "^6.4.1",
-    "path": "^0.12.7",
+    "path": "^0.12.7"
   },
   "devDependencies": {},
   "scripts": {
