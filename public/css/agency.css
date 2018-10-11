@@ -169,13 +169,23 @@ img::-moz-selection {
   }
 }
 /* implement slider banner for intro gallery */
-header.masthead {
+/* header.masthead {
   text-align: center;
   background-repeat: no-repeat;
   background-attachment: scroll;
   background-position: center center;
   background-size: cover;
   background-color: black;
+  height: 700px;
+} */
+header.masthead {
+  text-align: center;
+  color: white;
+  background-image: url("../img/wood.png");
+  background-repeat: no-repeat;
+  background-attachment: scroll;
+  background-position: center center;
+  background-size: cover;
   height: 700px;
 }
 
@@ -193,21 +203,21 @@ header.masthead .intro-text .intro-lead-in {
 }
 
 
-/* header.masthead .intro-text .intro-heading {
+header.masthead .intro-text .intro-heading {
   font-size: 50px;
   font-weight: 700;
   line-height: 50px;
   margin-bottom: 25px;
   font-family: 'Montserrat', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol', 'Noto Color Emoji';
-} */
+}
 
 @media (min-width: 768px) {
   header.masthead .intro-text {
-    padding-top: 130px;
+    padding-top: 100px;
     padding-bottom: 50px;
   }
   header.masthead .intro-text .intro-lead-in {
-    color: white;
+    color: #FFA533;
     font-size: 40px;
     font-style: italic;
     line-height: 40px;
@@ -215,7 +225,7 @@ header.masthead .intro-text .intro-lead-in {
     font-family: 'Droid Serif', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol', 'Noto Color Emoji';
   }
   header.masthead .intro-text .intro-heading {
-    color: black;
+    color: white;
     font-size: 75px;
     font-weight: 700;
     line-height: 75px;
@@ -355,6 +365,32 @@ header.masthead .intro-text .intro-lead-in {
   left: 50%;
   transform: translateX(-50%);
   bottom: 0px;
+  font-size: 20px;
+}
+
+.previous {
+    background-color: white;
+    color: black;
+    transition-duration: 0.4s;
+}
+.previous:hover {
+  background-color: #FFA533;
+  color: white;
+}
+
+.next {
+    background-color: white;
+    color: black;
+    transition-duration: 0.4s;
+}
+
+.next:hover {
+  background-color: #FFA533;
+  color: white;
+}
+
+.round {
+    border-radius: 50%;
 }
 /* #services {
   top: -50px;
