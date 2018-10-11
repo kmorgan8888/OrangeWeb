@@ -824,6 +824,11 @@ section#contact :-ms-input-placeholder {
   font-family: 'Montserrat', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol', 'Noto Color Emoji';
 }
 
+/*Quote Form*/
+section#quote .form-group textarea.form-control {
+  height: 248px;
+}
+
 footer {
   padding: 25px 0;
   text-align: center;

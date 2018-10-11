@@ -69,3 +69,23 @@ $(document).ready(function() {
     moveToSelected("next");
   });
 });
+
+//Quote form validation
+jQuery.validator.setDefaults({
+  debug: true,
+  success: "valid"
+});
+$( "#workType" ).validate({
+  rules: {
+    field: {
+      required: true
+    }
+  }
+});
+$( "#budget" ).validate({
+  rules: {
+    field: {
+      required: true
+    }
+  }
+});
