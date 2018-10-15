@@ -37,7 +37,7 @@ section {
 section h2.section-heading {
   font-size: 40px;
   margin-top: 0;
-  margin-bottom: 15px;
+  margin-bottom: 25px;
 }
 
 section h3.section-subheading {
@@ -51,7 +51,7 @@ section h3.section-subheading {
 
 @media (min-width: 768px) {
   section {
-    padding: 150px 0;
+    padding: 130px 0;
   }
 }
 
@@ -142,14 +142,14 @@ img::-moz-selection {
 }
 
 @media (min-width: 992px) {
-  /* #mainNav {
+  #mainNav {
     padding-top: 25px;
     padding-bottom: 25px;
     -webkit-transition: padding-top 0.3s, padding-bottom 0.3s;
     transition: padding-top 0.3s, padding-bottom 0.3s;
     border: none;
     background-color: transparent;
-  } */
+  }
   #mainNav .navbar-brand {
     font-size: 1.75em;
     -webkit-transition: all 0.3s;
@@ -825,9 +825,16 @@ section#contact :-ms-input-placeholder {
 }
 
 /*Quote Form*/
+section#quote .form-control:focus {
+  border-color: #fed136;
+  -webkit-box-shadow: none;
+  box-shadow: none;
+}
+
 section#quote .form-group textarea.form-control {
   height: 248px;
 }
+
 
 footer {
   padding: 25px 0;
