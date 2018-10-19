@@ -65,6 +65,15 @@ app.get('/', function(req, res) {
   res.render('index');
 });
 
+app.post('/sendContact', function(req, res) {
+  
+});
+
+app.post('/sendQuote', function(req, res) {
+  console.log("sent request for form!");
+  res.render('index');
+});
+
 var server = app.listen(port, function() {
   console.log(`Server listening on port: '${port}'`);
 })
