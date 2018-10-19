@@ -825,8 +825,17 @@ section#contact :-ms-input-placeholder {
 }
 
 /*Quote Form*/
+section#quote .section-heading {
+  color: #fff;
+}
 section#quote .form-group textarea.form-control {
   height: 248px;
+}
+section#quote {
+  background-color: #212529;
+  background-image: url("../img/map-image.png");
+  background-repeat: no-repeat;
+  background-position: center;
 }
 
 footer {

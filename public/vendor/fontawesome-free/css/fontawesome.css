@@ -1719,6 +1719,7 @@ readers do not read off random characters that represent icons */
 
 .fa-hackerrank:before {
   content: "\f5f7"; }
+  
 
 .fa-hamsa:before {
   content: "\f665"; }
