@@ -56,10 +56,10 @@ $(document).ready(function() {
     }
     e.preventDefault();
   });
-
-  $("#carousel").click(function() {
-    moveToSelected($(this));
-  });
+  //Bug when clicking on pictures in carousel 
+  // $("#carousel").click(function() {
+  //   moveToSelected($(this));
+  // });
 
   $("#prev").click(function() {
     moveToSelected("prev");
