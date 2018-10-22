@@ -829,6 +829,9 @@ section#contact :-ms-input-placeholder {
 section#quote .section-heading {
   color: #fff;
 }
+section#quote .section-subheading {
+  color: #fff;
+}
 
 section#quote .form-control:focus {
   border-color: #fed136;
