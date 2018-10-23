@@ -34,6 +34,7 @@ app.use(flash());
 // Required to load stylesheets
 app.use(express.static(path.join(__dirname, 'public')));
 
+
 //Express validator
 app.use(expressValidator({
   errorFormatter: function(param, msg, value) {
@@ -61,6 +62,36 @@ app.use(function (req, res, next) {
 });
 
 app.get('/', function(req, res) {
+  res.render('index');
+});
+
+app.post('/send_quote', function(req, res) {
+
+  var name = req.body.name,
+  email = req.body.email,
+  phone = req.body.phone,
+  workType = req.body.workType,
+  budget = req.body.budget,
+  message = req.body.message;
+  sgMail = require('@sendgrid/mail');
+  console.log("Quote Form received")
+  console.log(name+"\n"+email+"\n"+phone+"\n"+workType+"\n"+budget+"\n"+message);
+
+  // using SendGrid to process quote form to server
+  sgMail.setApiKey(process.env.SENDGRID_API_KEY);
+    var msg = {
+    // to be changed to client's email
+    to: 'hgpadua@knights.ucf.edu',
+    from: email,
+    subject: 'Quote Form received from Orange Construction Website',
+    text: `Name: '${name}',
+          Phone: '${phone}',
+          Work Type: '${workType}',
+          Budget: '${budget}',
+          Message: '${message}'`,
+  };
+  sgMail.send(msg);
+  console.log("message sent using sendgrid");
   res.render('index');
 });
 
