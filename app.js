@@ -67,21 +67,23 @@ app.get('/', function(req, res) {
 
 app.post('/send_quote', function(req, res) {
 
-  var name = req.body.name;
-  var email = req.body.email;
-  var phone = req.body.phone;
-  var workType = req.body.workType;
-  var budget = req.body.budget;
-  var message = req.body.message;
-  var sgMail = require('@sendgrid/mail');
-  console.log(name+" "+email+" "+phone+" "+workType+" "+budget+" "+message);
+  var name = req.body.name,
+  email = req.body.email,
+  phone = req.body.phone,
+  workType = req.body.workType,
+  budget = req.body.budget,
+  message = req.body.message;
+  sgMail = require('@sendgrid/mail');
+  console.log("Quote Form received")
+  console.log(name+"\n"+email+"\n"+phone+"\n"+workType+"\n"+budget+"\n"+message);
 
   // using SendGrid to process quote form to server
   sgMail.setApiKey(process.env.SENDGRID_API_KEY);
     var msg = {
+    // to be changed to client's email
     to: 'hgpadua@knights.ucf.edu',
     from: email,
-    subject: 'Quote Form recieved from Orange Construction Website',
+    subject: 'Quote Form received from Orange Construction Website',
     text: `Name: '${name}',
           Phone: '${phone}',
           Work Type: '${workType}',
