@@ -22,13 +22,15 @@ $(function() {
       $this = $("#sendQuoteButton");
       $this.prop("disabled", true); // Disable submit button until AJAX call is complete to prevent duplicate messages
       $.ajax({
-        url: "././mail/contact_me.php",
+        url: "/send_quote",
         type: "POST",
         data: {
           name: name,
           phone: phone,
           email: email,
-          message: message
+          message: message,
+          workType: workType,
+          budget: budget
         },
         cache: false,
         success: function() {
