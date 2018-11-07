@@ -84,11 +84,11 @@ app.post('/send_quote', function(req, res) {
     to: 'hgpadua@knights.ucf.edu',
     from: email,
     subject: 'Quote Form received from Orange Construction Website',
-    text: `Name: '${name}',
-          Phone: '${phone}',
-          Work Type: '${workType}',
-          Budget: '${budget}',
-          Message: '${message}'`,
+    text: `Name: ${name},
+          Phone: ${phone},
+          Work Type: ${workType},
+          Budget: ${budget},
+          Message: ${message}`,
   };
   sgMail.send(msg);
   console.log("message sent using sendgrid");

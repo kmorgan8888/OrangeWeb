@@ -56,7 +56,7 @@ $(document).ready(function() {
     }
     e.preventDefault();
   });
-  //Bug when clicking on pictures in carousel 
+  //Bug when clicking on pictures in carousel
   // $("#carousel").click(function() {
   //   moveToSelected($(this));
   // });

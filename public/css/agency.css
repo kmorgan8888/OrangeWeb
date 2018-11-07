@@ -3,6 +3,91 @@ body {
   overflow-x: hidden;
   font-family: 'Roboto Slab', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol', 'Noto Color Emoji';
 }
+/* Position the image container (needed to position the left and right arrows) */
+.container {
+  position: relative;
+}
+
+/* Hide the images by default */
+.mySlides {
+  display: none;
+}
+
+/* Add a pointer when hovering over the thumbnail images */
+.cursor {
+  cursor: pointer;
+}
+
+/* Next & previous buttons */
+.prev,
+.next {
+  cursor: pointer;
+  position: absolute;
+  top: 40%;
+  width: auto;
+  padding: 16px;
+  margin-top: -50px;
+  color: white;
+  font-weight: bold;
+  font-size: 20px;
+  border-radius: 0 3px 3px 0;
+  user-select: none;
+  -webkit-user-select: none;
+}
+
+/* Position the "next button" to the right */
+.next {
+  right: 0;
+  border-radius: 3px 0 0 3px;
+}
+.prev{
+	left: 0;
+}
+
+/* On hover, add a black background color with a little bit see-through */
+.prev:hover,
+.next:hover {
+  background-color: rgba(0, 0, 0, 0.8);
+}
+
+/* Number text (1/3 etc) */
+.numbertext {
+  color: #f2f2f2;
+  font-size: 12px;
+  padding: 8px 12px 0px 30px;
+  position: absolute;
+  top: 0;
+}
+
+/* Container for image text */
+.caption-container {
+  text-align: center;
+  background-color: #222;
+  padding: 2px 0px 5px;
+  color: white;
+}
+
+.row:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+/* Six columns side by side */
+.column {
+  float: left;
+  width: 16.66%;
+}
+
+/* Add a transparency effect for thumnbail images */
+.demo {
+  opacity: 0.6;
+}
+
+.active,
+.demo:hover {
+  opacity: 1;
+}
 
 p {
   line-height: 1.75;
@@ -141,8 +226,10 @@ img::-moz-selection {
   color: #fed136;
 }
 
-@media (min-width: 992px) {
+@media (min-width: 768px) {
+	
   #mainNav {
+	padding-left:50px;
     padding-top: 25px;
     padding-bottom: 25px;
     -webkit-transition: padding-top 0.3s, padding-bottom 0.3s;
@@ -168,20 +255,11 @@ img::-moz-selection {
     padding: 12px 0;
   }
 }
-/* implement slider banner for intro gallery */
-/* header.masthead {
-  text-align: center;
-  background-repeat: no-repeat;
-  background-attachment: scroll;
-  background-position: center center;
-  background-size: cover;
-  background-color: black;
-  height: 700px;
-} */
+
 header.masthead {
   text-align: center;
   color: white;
-  background-image: url("../img/wood.png");
+  background-image: url("../img/background/wood.png");
   background-repeat: no-repeat;
   background-attachment: scroll;
   background-position: center center;
@@ -245,7 +323,7 @@ header.masthead .intro-text .intro-heading {
 
   /* Slideshow container */
   header.masthead .intro-text .slideshow-container {
-    max-width: 1000px;
+    max-width: 900px;
     padding-top: 10px;
     bottom: -200px;
     position: relative;
@@ -294,7 +372,7 @@ header.masthead .intro-text .intro-heading {
   }
 
 }
-
+/*
 #carousel {
   position: relative;
   height: 400px;
@@ -366,10 +444,17 @@ header.masthead .intro-text .intro-heading {
 #carousel div.nextRightSecond img {
   width: 200px;
 }
+@media (min-width: 768px) {
+  .buttons {
+    top: 100px;
+  }
+}
 
 .buttons {
-  top: 30px;
+  top: 10px;
+  width: 100%;
   position: relative;
+  align-items: center;
   left: 50%;
   transform: translateX(-50%);
   bottom: 0px;
@@ -408,6 +493,11 @@ header.masthead .intro-text .intro-heading {
 
   margin: 15px 0;
   text-transform: none;
+}
+@media (min-width: 768px) {
+	.buttons{
+		top:0px;
+	}
 }
 
 #portfolio .portfolio-item {
@@ -776,7 +866,7 @@ header.masthead .intro-text .intro-heading {
 
 section#contact {
   background-color: #212529;
-  background-image: url("../img/map-image.png");
+  background-image: url("../img/background/map-image.png");
   background-repeat: no-repeat;
   background-position: center;
 }
@@ -853,7 +943,7 @@ section#quote .form-group textarea.form-control {
 }
 section#quote {
   background-color: #212529;
-  background-image: url("../img/map-image.png");
+  background-image: url("../img/background/map-image.png");
   background-repeat: no-repeat;
   background-position: center;
 }
