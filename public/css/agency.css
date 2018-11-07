@@ -366,10 +366,17 @@ header.masthead .intro-text .intro-heading {
 #carousel div.nextRightSecond img {
   width: 200px;
 }
+@media (min-width: 768px) {
+  .buttons {
+    top: 100px;
+  }
+}
 
 .buttons {
-  top: 30px;
+  top: 10px;
+  width: 100%;
   position: relative;
+  align-items: center;
   left: 50%;
   transform: translateX(-50%);
   bottom: 0px;
