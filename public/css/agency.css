@@ -62,7 +62,10 @@ body {
 /* Container for image text */
 .caption-container {
   text-align: center;
+  text-decoration: underline;
   background-color: #222;
+  margin-left: 25px;
+  margin-right: 25px;
   padding: 2px 0px 5px;
   color: white;
 }
@@ -227,7 +230,7 @@ img::-moz-selection {
 }
 
 @media (min-width: 768px) {
-	
+
   #mainNav {
 	padding-left:50px;
     padding-top: 25px;
