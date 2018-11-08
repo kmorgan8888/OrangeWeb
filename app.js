@@ -5,6 +5,7 @@ UI/UX Design
 Fall 2018
 */
 
+// Dependencies
 var express = require('express');
 var expressSession = require('express-session');
 var cookieParser = require('cookie-parser');
@@ -14,6 +15,7 @@ var path = require('path');
 var flash = require('connect-flash');
 var port = process.env.PORT || 3000;
 
+// initialize express
 var app = express();
 
 // view engine setup
@@ -53,20 +55,12 @@ app.use(expressValidator({
   }
 }));
 
-//Global Vars
-app.use(function (req, res, next) {
-  res.locals.success_msg = req.flash('success');
-  res.locals.error = req.flash('error');
-  res.locals.user = req.user || null;
-  next();
-});
-
 app.get('/', function(req, res) {
   res.render('index');
 });
 
+// post quote form from client to be received on server
 app.post('/send_quote', function(req, res) {
-
   var name = req.body.name,
   email = req.body.email,
   phone = req.body.phone,
@@ -77,11 +71,11 @@ app.post('/send_quote', function(req, res) {
   console.log("Quote Form received")
   console.log(name+"\n"+email+"\n"+phone+"\n"+workType+"\n"+budget+"\n"+message);
 
-  // using SendGrid to process quote form to server
+  // using SendGridAPI to process quote form to server
   sgMail.setApiKey(process.env.SENDGRID_API_KEY);
     var msg = {
     // to be changed to client's email
-    to: 'hgpadua@knights.ucf.edu',
+    to: 'steve@orange.construction',
     from: email,
     subject: 'Quote Form received from Orange Construction Website',
     text: `Name: ${name},
