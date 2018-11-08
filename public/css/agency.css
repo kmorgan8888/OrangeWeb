@@ -63,7 +63,7 @@ body {
 .caption-container {
   text-align: center;
   text-decoration: underline;
-  background-color: #222;
+  /* background-color: #222; */
   margin-left: 25px;
   margin-right: 25px;
   padding: 2px 0px 5px;
