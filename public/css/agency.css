@@ -62,7 +62,6 @@ body {
 /* Container for image text */
 .caption-container {
   text-align: center;
-  text-decoration: underline;
   /* background-color: #222; */
   margin-left: 25px;
   margin-right: 25px;
@@ -276,6 +275,7 @@ header.masthead .intro-text {
 }
 
 header.masthead .intro-text .intro-lead-in {
+  color: #FFA533;
   font-size: 22px;
   font-style: italic;
   line-height: 22px;
