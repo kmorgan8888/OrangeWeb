@@ -954,12 +954,14 @@ section#quote {
 footer {
   padding: 25px 0;
   text-align: center;
+  background-image: url("../img/background/dark4.png");
 }
 
 footer span.copyright {
   font-size: 90%;
   line-height: 40px;
   text-transform: none;
+  color: white;
   font-family: 'Montserrat', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol', 'Noto Color Emoji';
 }
 
