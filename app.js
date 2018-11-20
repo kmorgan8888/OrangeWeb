@@ -75,7 +75,7 @@ app.post('/send_quote', function(req, res) {
   sgMail.setApiKey(process.env.SENDGRID_API_KEY);
     var msg = {
     // to be changed to client's email
-    to: 'steve@orange.construction',
+    to: 'steven@orange.construction',
     from: email,
     subject: 'Quote Form received from Orange Construction Website',
     text: `Name: ${name},
