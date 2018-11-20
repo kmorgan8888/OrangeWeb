@@ -67,12 +67,13 @@ app.post('/send_quote', function(req, res) {
   workType = req.body.workType,
   budget = req.body.budget,
   message = req.body.message;
-  sgMail = require('@sendgrid/mail');
+  sgMail = require('@sendgrid/mail'),
+  sendgridApi = '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';
   console.log("Quote Form received")
   console.log(name+"\n"+email+"\n"+phone+"\n"+workType+"\n"+budget+"\n"+message);
 
   // using SendGridAPI to process quote form to server
-  sgMail.setApiKey(process.env.SENDGRID_API_KEY);
+  sgMail.setApiKey(sendgridApi);
     var msg = {
     // to be changed to client's email
     to: 'steven@orange.construction',
